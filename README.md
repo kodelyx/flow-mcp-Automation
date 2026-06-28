@@ -31,7 +31,7 @@ Open Cursor Settings (`Cmd + ,`) -> **Models** -> **MCP** -> **Add New MCP Serve
 * **Type**: `command`
 * **Command**: `docker exec -i flow-agent-server python3 -u /app/flow_mcp_server.py`
 
-*For Claude Desktop / ChatGPT Desktop, paste this into your configuration JSON:*
+*For Claude Desktop / ChatGPT Desktop (Codex), paste this into your configuration JSON:*
 ```json
 {
   "mcpServers": {
