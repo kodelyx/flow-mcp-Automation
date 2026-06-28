@@ -1,0 +1,29 @@
+# ChatGPT Model Context Protocol (MCP) Configuration Reference
+
+## 1. Web Integration (SSE Transport)
+For ChatGPT Web via Chrome / Custom Connectors:
+* **Transport Type**: SSE
+* **URL**: https://flow.chatbulky.com/sse
+* **Authentication**: None (Disable OAuth)
+
+---
+
+## 2. Desktop App Integration (Stdio Transport)
+For ChatGPT Desktop / Claude Desktop configuration:
+```json
+{
+  "mcpServers": {
+    "flow": {
+      "command": "docker",
+      "args": [
+        "exec",
+        "-i",
+        "flow-agent-server",
+        "python3",
+        "-u",
+        "/app/flow_mcp_server.py"
+      ]
+    }
+  }
+}
+```

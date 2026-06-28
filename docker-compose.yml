@@ -1,0 +1,27 @@
+services:
+  flow-agent:
+    image: akashyadav758/flow-agent-studio-backend:mcp
+    container_name: flow-agent-server
+    ports:
+      - "8001:8001"    # OpenAI-compatible API + WebSocket /ws
+      - "8100:8100"    # HTTP callback for Extension
+    environment:
+      - WS_PORT=9227
+      - HTTP_PORT=8100
+      - API_HOST=0.0.0.0
+      - API_PORT=8001
+      - OPENAI_API_HOST=0.0.0.0
+      - OPENAI_API_PORT=8001
+      - API_SSL=false
+      - DEFAULT_PROJECT=0143adf4-5864-4cb4-abb5-fe4254ad0dc7
+      - IMAGE_MODEL=NARWHAL
+      - POLL_INTERVAL=10
+      - POLL_TIMEOUT=420
+      - PUBLIC_BASE_URL=https://flow.chatbulky.com
+    volumes:
+      - backend-output:/app/output
+      - /Users:/Users:ro
+    restart: unless-stopped
+
+volumes:
+  backend-output:

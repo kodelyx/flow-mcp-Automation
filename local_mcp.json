@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "flow": {
+      "command": "docker",
+      "args": [
+        "exec",
+        "-i",
+        "flow-agent-server",
+        "python3",
+        "-u",
+        "/app/flow_mcp_server.py"
+      ]
+    }
+  }
+}
