@@ -1,6 +1,6 @@
-# ⚡ Flow Agent API Documentation (`flow.md`)
+# ⚡ Flow Automation and MCP Setup
 
-This guide documents the OpenAI-compatible REST API endpoints exposed by the standalone **Flow Agent Backend Server** running on `http://localhost:8001`.
+This guide documents the OpenAI-compatible REST API and MCP endpoints exposed by the standalone **Flow Automation Backend Server** running on `http://localhost:8001`.
 
 ---
 
@@ -167,7 +167,7 @@ if "data" in data and len(data["data"]) > 0:
 
 ## 🛠️ 7. Model Context Protocol (MCP) Setup
 
-You can integrate this Flow Agent directly into Cursor or Claude Desktop to use it as a native AI tool.
+You can integrate this Flow Automation service directly into Cursor or Claude Desktop to use it as a native AI tool.
 
 ### Cursor Setup:
 1. Open Cursor Settings (`Cmd + ,`) -> **Models** -> **MCP**.
